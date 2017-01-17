@@ -1,0 +1,9 @@
+c:\users\szalb\onedrive\dokumenty\visual studio 2015\Projects\Aplikacja na projekt\Aplikacja na projekt\bin\Debug\Aplikacja na projekt.exe.config
+c:\users\szalb\onedrive\dokumenty\visual studio 2015\Projects\Aplikacja na projekt\Aplikacja na projekt\obj\Debug\Aplikacja na projekt.csprojResolveAssemblyReference.cache
+c:\users\szalb\onedrive\dokumenty\visual studio 2015\Projects\Aplikacja na projekt\Aplikacja na projekt\obj\Debug\Aplikacja_na_projekt.Form1.resources
+c:\users\szalb\onedrive\dokumenty\visual studio 2015\Projects\Aplikacja na projekt\Aplikacja na projekt\obj\Debug\Aplikacja_na_projekt.Properties.Resources.resources
+c:\users\szalb\onedrive\dokumenty\visual studio 2015\Projects\Aplikacja na projekt\Aplikacja na projekt\obj\Debug\Aplikacja na projekt.csproj.GenerateResource.Cache
+c:\users\szalb\onedrive\dokumenty\visual studio 2015\Projects\Aplikacja na projekt\Aplikacja na projekt\bin\Debug\Aplikacja na projekt.exe
+c:\users\szalb\onedrive\dokumenty\visual studio 2015\Projects\Aplikacja na projekt\Aplikacja na projekt\bin\Debug\Aplikacja na projekt.pdb
+c:\users\szalb\onedrive\dokumenty\visual studio 2015\Projects\Aplikacja na projekt\Aplikacja na projekt\obj\Debug\Aplikacja na projekt.exe
+c:\users\szalb\onedrive\dokumenty\visual studio 2015\Projects\Aplikacja na projekt\Aplikacja na projekt\obj\Debug\Aplikacja na projekt.pdb

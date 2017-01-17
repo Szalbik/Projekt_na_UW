@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="srednia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="arr" type="tns:ArrayOfDouble" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDouble">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="double" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="sredniaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sredniaResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mediana">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="arr" type="tns:ArrayOfDouble" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="medianaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="medianaResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wariancja">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="arr" type="tns:ArrayOfDouble" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wariancjaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="wariancjaResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="std_odchylenie">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="arr" type="tns:ArrayOfDouble" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="std_odchylenieResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="std_odchylenieResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="sredniaSoapIn">
+    <wsdl:part name="parameters" element="tns:srednia" />
+  </wsdl:message>
+  <wsdl:message name="sredniaSoapOut">
+    <wsdl:part name="parameters" element="tns:sredniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="medianaSoapIn">
+    <wsdl:part name="parameters" element="tns:mediana" />
+  </wsdl:message>
+  <wsdl:message name="medianaSoapOut">
+    <wsdl:part name="parameters" element="tns:medianaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wariancjaSoapIn">
+    <wsdl:part name="parameters" element="tns:wariancja" />
+  </wsdl:message>
+  <wsdl:message name="wariancjaSoapOut">
+    <wsdl:part name="parameters" element="tns:wariancjaResponse" />
+  </wsdl:message>
+  <wsdl:message name="std_odchylenieSoapIn">
+    <wsdl:part name="parameters" element="tns:std_odchylenie" />
+  </wsdl:message>
+  <wsdl:message name="std_odchylenieSoapOut">
+    <wsdl:part name="parameters" element="tns:std_odchylenieResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="srednia">
+      <wsdl:input message="tns:sredniaSoapIn" />
+      <wsdl:output message="tns:sredniaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mediana">
+      <wsdl:input message="tns:medianaSoapIn" />
+      <wsdl:output message="tns:medianaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wariancja">
+      <wsdl:input message="tns:wariancjaSoapIn" />
+      <wsdl:output message="tns:wariancjaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="std_odchylenie">
+      <wsdl:input message="tns:std_odchylenieSoapIn" />
+      <wsdl:output message="tns:std_odchylenieSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="srednia">
+      <soap:operation soapAction="http://tempuri.org/srednia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mediana">
+      <soap:operation soapAction="http://tempuri.org/mediana" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wariancja">
+      <soap:operation soapAction="http://tempuri.org/wariancja" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="std_odchylenie">
+      <soap:operation soapAction="http://tempuri.org/std_odchylenie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="srednia">
+      <soap12:operation soapAction="http://tempuri.org/srednia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mediana">
+      <soap12:operation soapAction="http://tempuri.org/mediana" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wariancja">
+      <soap12:operation soapAction="http://tempuri.org/wariancja" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="std_odchylenie">
+      <soap12:operation soapAction="http://tempuri.org/std_odchylenie" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="http://localhost:52814/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="http://localhost:52814/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

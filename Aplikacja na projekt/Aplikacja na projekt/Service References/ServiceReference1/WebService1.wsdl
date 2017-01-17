@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="kwadrat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="kwadratResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="kwadratResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="trojkat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="h" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="trojkatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="trojkatResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="prostakat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="b" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="prostakatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="prostakatResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rownoleglobok">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="h" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rownoleglobokResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="rownoleglobokResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="trapez">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="b" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="h" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="trapezResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="trapezResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="kwadratSoapIn">
+    <wsdl:part name="parameters" element="tns:kwadrat" />
+  </wsdl:message>
+  <wsdl:message name="kwadratSoapOut">
+    <wsdl:part name="parameters" element="tns:kwadratResponse" />
+  </wsdl:message>
+  <wsdl:message name="trojkatSoapIn">
+    <wsdl:part name="parameters" element="tns:trojkat" />
+  </wsdl:message>
+  <wsdl:message name="trojkatSoapOut">
+    <wsdl:part name="parameters" element="tns:trojkatResponse" />
+  </wsdl:message>
+  <wsdl:message name="prostakatSoapIn">
+    <wsdl:part name="parameters" element="tns:prostakat" />
+  </wsdl:message>
+  <wsdl:message name="prostakatSoapOut">
+    <wsdl:part name="parameters" element="tns:prostakatResponse" />
+  </wsdl:message>
+  <wsdl:message name="rownoleglobokSoapIn">
+    <wsdl:part name="parameters" element="tns:rownoleglobok" />
+  </wsdl:message>
+  <wsdl:message name="rownoleglobokSoapOut">
+    <wsdl:part name="parameters" element="tns:rownoleglobokResponse" />
+  </wsdl:message>
+  <wsdl:message name="trapezSoapIn">
+    <wsdl:part name="parameters" element="tns:trapez" />
+  </wsdl:message>
+  <wsdl:message name="trapezSoapOut">
+    <wsdl:part name="parameters" element="tns:trapezResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="kwadrat">
+      <wsdl:input message="tns:kwadratSoapIn" />
+      <wsdl:output message="tns:kwadratSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="trojkat">
+      <wsdl:input message="tns:trojkatSoapIn" />
+      <wsdl:output message="tns:trojkatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="prostakat">
+      <wsdl:input message="tns:prostakatSoapIn" />
+      <wsdl:output message="tns:prostakatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="rownoleglobok">
+      <wsdl:input message="tns:rownoleglobokSoapIn" />
+      <wsdl:output message="tns:rownoleglobokSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="trapez">
+      <wsdl:input message="tns:trapezSoapIn" />
+      <wsdl:output message="tns:trapezSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="kwadrat">
+      <soap:operation soapAction="http://tempuri.org/kwadrat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="trojkat">
+      <soap:operation soapAction="http://tempuri.org/trojkat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="prostakat">
+      <soap:operation soapAction="http://tempuri.org/prostakat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rownoleglobok">
+      <soap:operation soapAction="http://tempuri.org/rownoleglobok" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="trapez">
+      <soap:operation soapAction="http://tempuri.org/trapez" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="kwadrat">
+      <soap12:operation soapAction="http://tempuri.org/kwadrat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="trojkat">
+      <soap12:operation soapAction="http://tempuri.org/trojkat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="prostakat">
+      <soap12:operation soapAction="http://tempuri.org/prostakat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rownoleglobok">
+      <soap12:operation soapAction="http://tempuri.org/rownoleglobok" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="trapez">
+      <soap12:operation soapAction="http://tempuri.org/trapez" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="http://localhost:52274/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="http://localhost:52274/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
