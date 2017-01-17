@@ -7,3 +7,6 @@ c:\users\szalb\onedrive\dokumenty\visual studio 2015\Projects\Aplikacja na proje
 c:\users\szalb\onedrive\dokumenty\visual studio 2015\Projects\Aplikacja na projekt\Aplikacja na projekt\bin\Debug\Aplikacja na projekt.pdb
 c:\users\szalb\onedrive\dokumenty\visual studio 2015\Projects\Aplikacja na projekt\Aplikacja na projekt\obj\Debug\Aplikacja na projekt.exe
 c:\users\szalb\onedrive\dokumenty\visual studio 2015\Projects\Aplikacja na projekt\Aplikacja na projekt\obj\Debug\Aplikacja na projekt.pdb
+C:\Users\szalb\OneDrive\Dokumenty\Visual Studio 2015\Projects\Nowy folder\Aplikacja na projekt\Aplikacja na projekt\bin\Debug\Aplikacja na projekt.exe.config
+C:\Users\szalb\OneDrive\Dokumenty\Visual Studio 2015\Projects\Nowy folder\Aplikacja na projekt\Aplikacja na projekt\obj\Debug\Aplikacja na projekt.exe
+C:\Users\szalb\OneDrive\Dokumenty\Visual Studio 2015\Projects\Nowy folder\Aplikacja na projekt\Aplikacja na projekt\obj\Debug\Aplikacja na projekt.pdb

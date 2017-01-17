@@ -46,7 +46,7 @@ namespace Aplikacja_na_projekt
                 aod.Add(Convert.ToDouble(d));
             }
 
-            switch (comboBox2.SelectedItem)
+            switch (comboBox2.SelectedText)
             {
                 case "Mediana":
                     button4.Text = klient.mediana(aod).ToString();
